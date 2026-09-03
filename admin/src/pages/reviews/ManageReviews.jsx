@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../../layouts/AdminLayout";
-import ReviewList from "./ReviewList";
+import ReviewList from "./reviewList";
 
 export default function ManageReviews() {
   const navigate = useNavigate();
