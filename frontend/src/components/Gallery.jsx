@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE from "../config";
 
 export default function Gallery() {
   const [gallery, setGallery] = useState([]);
@@ -9,7 +10,7 @@ export default function Gallery() {
 
   async function loadGallery() {
     try {
-      const response = await fetch("http://localhost:5000/api/gallery");
+      const response = await fetch(`${API_BASE}/api/gallery`);
 
       if (!response.ok) {
         throw new Error("Failed to load gallery");

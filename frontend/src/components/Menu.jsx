@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE from "../config";
 
 const categoryIcons = {
   Starter: '🥗',
@@ -14,7 +15,7 @@ export default function Menu() {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/menu")
+    fetch(`${API_BASE}/api/menu`)
       .then((res) => res.json())
       .then((data) => setMenu(data))
       .catch((err) => console.error(err));

@@ -1,4 +1,5 @@
-const API = "http://localhost:5000/api/bookings";
+import API_BASE from "./config";
+const API = `${API_BASE}/api/bookings`;
 
 // ==========================
 // GET ALL BOOKINGS

@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/offers";
+import API_BASE from "./config";
+const API_URL = `${API_BASE}/api/offers`;
 
 // Get all offers
 export async function getOffers() {

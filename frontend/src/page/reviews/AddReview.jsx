@@ -1,4 +1,5 @@
 import { useState } from "react";
+import API_BASE from "../../config";
 
 export default function AddReview({ onClose }) {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ export default function AddReview({ onClose }) {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/reviews", {
+      const response = await fetch(`${API_BASE}/api/reviews`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

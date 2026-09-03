@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE from "../config";
 
 export default function Offers() {
   const [offers, setOffers] = useState([]);
@@ -9,7 +10,7 @@ export default function Offers() {
 
   async function loadOffers() {
     try {
-      const response = await fetch("http://localhost:5000/api/offers");
+      const response = await fetch(`${API_BASE}/api/offers`);
 
       const data = await response.json();
 

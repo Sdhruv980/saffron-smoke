@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AddReview from "../page/reviews/AddReview";
+import API_BASE from "../config";
 
 export default function Reviews() {
   const [showReview, setShowReview] = useState(false);
@@ -8,7 +9,7 @@ export default function Reviews() {
   // Load approved reviews
   const loadReviews = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/reviews");
+      const response = await fetch(`${API_BASE}/api/reviews`);
       const data = await response.json();
 
       setReviews(

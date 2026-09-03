@@ -1,4 +1,5 @@
-const API_URL = "http://localhost:5000/api/gallery";
+import API_BASE from "./config";
+const API_URL = `${API_BASE}/api/gallery`;
 
 // Get all gallery images
 export async function getGallery() {

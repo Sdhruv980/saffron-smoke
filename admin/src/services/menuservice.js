@@ -1,4 +1,5 @@
-const API = "http://localhost:5000/api/menu";
+import API_BASE from "./config";
+const API = `${API_BASE}/api/menu`;
 
 // ==========================
 // GET ALL MENU

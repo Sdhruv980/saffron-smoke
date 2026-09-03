@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { restaurant } from "../data/restaurant";
+import API_BASE from "../config";
 
 export default function Contact() {
 
@@ -43,7 +44,7 @@ export default function Contact() {
 
     try {
 
-      const res = await fetch("http://localhost:5000/api/bookings", {
+      const res = await fetch(`${API_BASE}/api/bookings`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,19 +60,22 @@ export default function Contact() {
 
         setSubmitted(true);
 
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          date: "",
-          time: "",
-          guests: "2",
-          message: "",
-        });
+        setTimeout(() => {
+          setSubmitted(false);
+          setForm({
+            name: "",
+            phone: "",
+            guests: "2",
+            date: "",
+            time: "19:00",
+            occasion: "",
+            notes: "",
+          });
+        }, 4000);
 
       } else {
 
-        alert(data.message || "Booking failed");
+        alert(data.message || "Failed to book table");
 
       }
 
@@ -79,7 +83,7 @@ export default function Contact() {
     } catch (err) {
 
       console.error(err);
-      alert("Booking server not running");
+      alert("Something went wrong!");
 
     }
 
@@ -105,7 +109,7 @@ export default function Contact() {
     try {
 
       const res = await fetch(
-        "http://localhost:5000/api/messages",
+        `${API_BASE}/api/messages`,
         {
           method: "POST",
           headers:{
