@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "category": "Starter",
+    "item": "Tandoori Paneer Skewers",
+    "price": 349
+  },
+  {
+    "id": 2,
+    "category": "Starter",
+    "item": "Crispy Corn Delight",
+    "price": 279
+  },
+  {
+    "id": 3,
+    "category": "Main Course",
+    "item": "Butter Paneer Masala",
+    "price": 422
+  },
+  {
+    "id": 4,
+    "category": "Main Course",
+    "item": "Smoked Dal Makhani",
+    "price": 349
+  },
+  {
+    "id": 5,
+    "category": "Pizza",
+    "item": "Farmhouse Wood-Fired Pizza",
+    "price": 499
+  },
+  {
+    "id": 6,
+    "category": "Pasta",
+    "item": "Creamy Alfredo Pasta",
+    "price": 429
+  }
+]

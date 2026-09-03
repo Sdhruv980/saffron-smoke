@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1784190151426,
+    "name": "Dhruv Sheladiya",
+    "email": "dhruvsheladiya14@gmail.com",
+    "subject": "for booking table",
+    "message": "booking table attoday night",
+    "status": "Unread",
+    "createdAt": "2026-07-16T08:22:31.426Z"
+  },
+  {
+    "id": 1784190908008,
+    "name": "Dhruv ",
+    "email": "dhruvsheladiya@gmail.com",
+    "subject": "for table booking ",
+    "message": "i want to book table for today ",
+    "status": "Unread",
+    "createdAt": "2026-07-16T08:35:08.008Z"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "name": "Dhruv",
+    "email": "dhruv@gmail.com",
+    "rating": 5,
+    "review": "Amazing food and excellent service!",
+    "status": "Approved",
+    "createdAt": "2026-07-15T10:00:00.000Z"
+  }
+]
