@@ -1,0 +1,43 @@
+services:
+  # ── Backend API (Express.js) ──────────────────────────────
+  - type: web
+    name: saffron-smoke-backend
+    runtime: node
+    rootDir: ./backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+
+  # ── Frontend (Vite + React) ───────────────────────────────
+  - type: web
+    name: saffron-smoke-frontend
+    runtime: static
+    rootDir: ./frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false          # set this in the Render dashboard to your backend URL
+
+  # ── Admin Panel (Vite + React) ────────────────────────────
+  - type: web
+    name: saffron-smoke-admin
+    runtime: static
+    rootDir: ./admin
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false          # set this in the Render dashboard to your backend URL
