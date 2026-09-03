@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 
-import menuRoutes from "./routes/menuRoutes.js";
+import menuRoutes from "./routes/menuroutes.js";
 
-import bookingRoutes from "./routes/bookingRoutes.js";
+import bookingRoutes from "./routes/bookingroutes.js";
 
 import reviewRoutes from "./routes/reviewroutes.js";
 
