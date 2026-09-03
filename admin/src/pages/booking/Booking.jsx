@@ -1,38 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../../layouts/AdminLayout";
 import BookingList from "./BookingList";
+import { FaCalendarAlt, FaCog } from "react-icons/fa";
 
 export default function Booking() {
   const navigate = useNavigate();
 
   return (
     <AdminLayout>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
-      >
-        <h1>Booking Management</h1>
+      <div className="page-header-bar">
+        <div className="page-header-left">
+          <div className="page-icon-pill amber">
+            <FaCalendarAlt />
+          </div>
+          <div>
+            <h2>Table Reservations</h2>
+            <p>Monitor guest requests, dining schedules, and table occupancy</p>
+          </div>
+        </div>
 
         <button
           onClick={() => navigate("/bookings/manage")}
-          style={{
-            background: "#2563eb",
-            color: "#fff",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: "8px",
-            cursor: "pointer",
-          }}
+          className="btn-luxury-primary"
         >
-          Manage Bookings
+          <FaCog style={{ marginRight: "8px" }} />
+          Moderate Reservations
         </button>
       </div>
 
-      <BookingList />
+      <div className="admin-content-card">
+        <BookingList />
+      </div>
     </AdminLayout>
   );
 }

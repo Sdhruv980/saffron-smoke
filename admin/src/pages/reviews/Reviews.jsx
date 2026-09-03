@@ -1,38 +1,36 @@
 import { useNavigate } from "react-router-dom";
 import AdminLayout from "../../layouts/AdminLayout";
 import ReviewList from "./reviewList";
+import { FaStar, FaTasks } from "react-icons/fa";
 
 export default function Reviews() {
   const navigate = useNavigate();
 
   return (
     <AdminLayout>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
-      >
-        <h1>Reviews</h1>
+      <div className="page-header-bar">
+        <div className="page-header-left">
+          <div className="page-icon-pill gold">
+            <FaStar />
+          </div>
+          <div>
+            <h2>Guest Testimonials</h2>
+            <p>Review diner feedback, star ratings, and review approvals</p>
+          </div>
+        </div>
 
         <button
           onClick={() => navigate("/reviews/manage")}
-          style={{
-            background: "#2563eb",
-            color: "#fff",
-            border: "none",
-            padding: "10px 18px",
-            borderRadius: "8px",
-            cursor: "pointer",
-          }}
+          className="btn-luxury-primary"
         >
-          Manage Reviews
+          <FaTasks style={{ marginRight: "8px" }} />
+          Moderate Reviews
         </button>
       </div>
 
-      <ReviewList />
+      <div className="admin-content-card">
+        <ReviewList />
+      </div>
     </AdminLayout>
   );
 }
