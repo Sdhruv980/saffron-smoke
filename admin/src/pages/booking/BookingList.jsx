@@ -3,7 +3,7 @@ import {
   getBookings,
   updateBooking,
   deleteBooking,
-} from "../../services/bookingService";
+} from "../../services/bookingservice";
 
 export default function BookingList({
   manage = false,

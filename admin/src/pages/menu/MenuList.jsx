@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMenu, deleteMenu } from "../../services/menuService";
+import { getMenu, deleteMenu } from "../../services/menuservice";
 
 export default function MenuList({
   manage = false,

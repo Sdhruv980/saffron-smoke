@@ -3,7 +3,7 @@ import {
   getOffers,
   deleteOffer,
   updateOffer,
-} from "../../services/offerService";
+} from "../../services/OfferService";
 
 export default function OfferList({ refresh, onRefresh }) {
   const [offers, setOffers] = useState([]);

@@ -5,7 +5,7 @@ import {
   addOffer,
   updateOffer,
   deleteOffer,
-} from "../../services/offerService";
+} from "../../services/OfferService";
 
 export default function Offers() {
   const [offers, setOffers] = useState([]);

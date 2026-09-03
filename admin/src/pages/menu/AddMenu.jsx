@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { addMenu, updateMenu } from "../../services/menuService";
+import { addMenu, updateMenu } from "../../services/menuservice";
 
 export default function AddMenu({
   menuItem,
